@@ -32,7 +32,7 @@ server.get("/jokes", (req, res) => {
   res.send(jokes);
 });
 
-server.get("/:id", (req, res) => {
+server.get("/jokes/:id", (req, res) => {
   const id = +req.params.id;
   const [joke] = jokes.filter((joke) => joke.id === id);
   res.status(200).send(joke);
@@ -53,4 +53,4 @@ server.get("/jokes/random", (req, res) => {
   res.status(200).send(joke);
 });
 
-server.listen(4000);
+server.listen(4002);
